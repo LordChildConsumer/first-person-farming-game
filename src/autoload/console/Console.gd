@@ -28,7 +28,7 @@ func _physics_process(delta):
 
 func _input(event):
 	# Toggle visibility
-	if Input.is_action_just_pressed("debug"):
+	if Input.is_action_just_pressed("show_console"):
 		visible = !visible
 	
 	# Go through command history with arrow keys

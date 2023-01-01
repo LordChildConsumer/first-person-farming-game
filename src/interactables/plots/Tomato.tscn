@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/interactables/Plot.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/interactables/crops/Tomato.tscn" type="PackedScene" id=2]
+
+[node name="Plot-Tomato" instance=ExtResource( 1 )]
+_crop = ExtResource( 2 )
+
+[node name="CollisionShape" parent="." index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0 )

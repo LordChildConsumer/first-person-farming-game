@@ -9,7 +9,7 @@ Created by Kawaii Kultist
 ## Design Notes
 
 #### Story
-- You must harvest enough crops to make a salad for your wife before she divorces you.
+- Your name is Harold. You must grow enough crops to make a salad which you can give to your wife, Linda, before she divorces you. (There will be no timer because that's lazy game design)
 
 #### Graphics
 - Basic voxel art with minimal detail because I'm lazy

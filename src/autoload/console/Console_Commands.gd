@@ -12,7 +12,8 @@ enum {
 # Constants
 const valid_commands = [
 	#["command", [ARG_TYPE, ARG_TYPE],
-	["help", [], "Shows the full list of commands"]
+	["help", [], "Shows the full list of commands"],
+	["upgrade", [ARG_STRING, ARG_STRING, ARG_INT], "Give yourself an upgrade. (ex: upgrade tomato rich-soil 1)"]
 ]
 
 # Variables
@@ -42,3 +43,12 @@ func help():
 		help_list += "%s | %s\n" % [c[0], c[2]]
 	
 	return help_list
+
+func upgrade(crop, upgrade, value):
+	if not crop in GameData.upgrade_data:
+		return "Crop: '%s' not found." % crop;
+	if not upgrade in GameData.upgrade_data[crop]:
+		return "Upgrade: '%s' not found in '%s'" % [upgrade, crop];
+	
+	GameData.upgrade_data[crop][upgrade] = value.to_int();
+	return "Set '%s/%s' equal to %s." % [crop, upgrade, value]; 
